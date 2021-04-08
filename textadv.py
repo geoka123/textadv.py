@@ -30,7 +30,7 @@ print('"Of course, i am heading there right now", you say.')
 input()
 print('You prepare your weapons, and go to the goblin nest, you see these two behind a fire laughing and drinking. You are 10 metres away. You wanna go closer, or no?   Answer with Y or N.')
 
-def fight(lst):
+def fight():
     while warrior_atr[0] > 0 and barbarian_atr[0] > 0:
         while goblin1_atr[0] > 0 or goblin2_atr[0] > 0: 
             num = random.randint(1,6)
@@ -131,22 +131,22 @@ move1 = str(input())
 if move1 == 'Y':
     print('As you move closer, you step on a branch of a tree and the goblins are now aware of you, prepare for a fight!!')
     if player_class == 'W':
-        fight(warrior_atr)
+        fight()
     elif player_class == 'B':
-        fight(barbarian_atr)
+        fight()
 elif move1 == 'N':
     print('You stay where you are, but one of the goblins is coming closer to you forr some reason. You wanna attack him, or you wanna hide?     Answer with A or H.')
     move2 = str(input())
     if move2 == 'A':
         print('Prepare for a fight!')
         if player_class == 'W':
-            fight(warrior_atr)
+            fight()
         elif player_class == 'B':
-            fight(barbarian_atr)
+            fight()
     else:
         print('As the goblin comes closer to you, he takes out a torch and unfortunately sees you.')
         print('Prepare for a fight!')
         if player_class == 'W':
-            fight(warrior_atr)
+            fight()
         elif player_class == 'B':
-            fight(barbarian_atr)
+            fight()
